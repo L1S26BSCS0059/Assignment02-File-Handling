@@ -42,11 +42,14 @@ int main()
     }
 
     inFile.ignore(100, '\n');
+
     ofstream outFile("scholarship.txt");
+
     if (n > 30)
     {
         cout << "Too many students!" << endl;
         inFile.close();
+        outFile.close();
         return 1;
     }
 
